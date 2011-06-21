@@ -1,0 +1,60 @@
+<%= link_to "logout" , signout_url %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+
+
+
+
+
+<h2> Emails</h2>
+
+<table>
+
+  <th>
+      <td>
+      Eamil
+      </td>
+    <td>
+           Remove
+    </td>
+  </th>
+  <% @user.identities.each do |identity| %>
+
+      <tr>
+        <td>
+        <%= identity.email %>
+        </td>
+<td>
+  [ ]
+</td>
+      </tr>
+
+
+
+  <% end %>
+
+
+</table>
+
+
+
+
+
+
+<h2> Identities</h2>
+
+<% @user.identities.each do |identity| %>
+
+    <li>
+      <%= identity.provider %>
+    </li>
+
+
+
+<% end %>

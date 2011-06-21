@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @identity.user_id %>
+</p>
+
+<p>
+  <b>Provider:</b>
+  <%= @identity.provider %>
+</p>
+
+<p>
+  <b>Uid:</b>
+  <%= @identity.uid %>
+</p>
+
+
+<%= link_to 'Edit', edit_identity_path(@identity) %> |
+<%= link_to 'Back', identities_path %>
